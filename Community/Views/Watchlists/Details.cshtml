@@ -1,0 +1,66 @@
+﻿@model Watchlist
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="row watchlist-details-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid watchlist-details-header-column">
+        @* Title *@
+        <p class="heading-title">@Model.Title</p>
+
+        @* Buttons *@
+        <div class="control-btn">
+            <div class="button">
+                <a class="btn btn-info" asp-controller="Watchlists" asp-action="Edit" asp-route-Id="@Model.WatchlistId">
+                    <i class="far fa-edit"></i>
+                    Edit
+                </a>
+            </div>
+            <div class="button">
+                <a class="btn btn-danger" asp-controller="Watchlists" asp-action="Delete" asp-route-Id="@Model.WatchlistId">
+                    <i class="far fa-trash-alt"></i>
+                    Delete
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Category navigation *@
+<nav class="watchlist-items-nav">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-link active" id="nav-movies-tab" data-toggle="tab" href="#nav-movies" role="tab" aria-controls="nav-movies" aria-selected="true">Movies</a>
+        <a class="nav-link" id="nav-series-tab" data-toggle="tab" href="#nav-series" role="tab" aria-controls="nav-series" aria-selected="false">Series</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    @* Movies list *@
+    <div class="tab-pane fade show active" id="nav-movies" role="tabpanel" aria-labelledby="nav-movies-tab">
+        <div class="row watchlist-items-container-row">
+            
+            @* Movies list *@
+            <div class="col-sm-12 container-fluid watchlist-items-container-column">
+                @foreach (var movie in Model.Movies)
+                {
+                    <partial name="_WatchlistMovieCard" model="movie" />
+                }
+            </div>
+        </div>
+    </div>
+
+    @* Series list *@
+    <div class="tab-pane fade" id="nav-series" role="tabpanel" aria-labelledby="nav-series-tab">
+        <div class="row watchlist-items-container-row">
+            
+            @* Movies list *@
+            <div class="col-sm-12 container-fluid watchlist-items-container-column">
+                @foreach (var series in Model.Series)
+                {
+                    <partial name="_WatchlistSeriesCard" model="series" />
+                }
+            </div>
+        </div>
+    </div>
+</div>

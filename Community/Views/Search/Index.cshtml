@@ -1,0 +1,56 @@
+﻿@model Search
+
+@{
+    ViewData["Title"] = "Search item";
+}
+
+<div class="row search-form-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid search-form-header-column">
+        <p class="heading-title">Search item</p>
+    </div>
+</div>
+
+<div class="row form-container">
+    @* Movies list *@
+    <div class="container-fluid search-form-container">
+        <form class="input-form" method="post" asp-controller="Search" asp-action="Index">
+            @* Accesses the validation information in the model *@
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-row">
+                @** Item title *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Title" asp-for="Title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                @* Search item *@
+                <div class="col">
+                    <select id="item-input" class="form-control" asp-for="Type">
+                        <option selected>Movie</option>
+                        <option>Series</option>
+                        <option>Watchlist</option>
+                    </select>
+                </div>
+            </div>
+
+            @* Submit and reset button *@
+            <div class="form-row btn-container">
+                <div class="button">
+                    <input type="submit" class="btn btn-success" value="Submit" />
+                </div>
+                <div class="button">
+                    <input type="reset" class="btn btn-danger" value="Reset" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

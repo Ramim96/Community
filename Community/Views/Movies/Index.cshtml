@@ -1,0 +1,36 @@
+﻿@model MovieViewModel
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<div class="row movie-list-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid movie-list-header-column">
+        @* Title *@
+        <p class="heading-title">Movies list</p>
+
+        @* Button *@
+        <a class="btn btn-add-movie" asp-controller="Movies" asp-action="Create">
+            <i class="fas fa-plus-circle"></i>
+            Movie
+        </a>
+    </div>
+</div>
+
+<div class="row movie-list-content-row">
+    @* Movies list *@
+    <div class="col-sm-12 container-fluid movies-list-content-column">
+        @if (Model.allMovies.Count() == 0)
+        {
+            <p class="empty-msg">No movies available</p>
+        }
+        else
+        {
+            @foreach (var movie in Model.allMovies)
+            {
+                <partial name="_MovieCard" model="movie" />
+            }
+        }
+    </div>
+</div>

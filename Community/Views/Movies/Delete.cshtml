@@ -1,0 +1,64 @@
+﻿@model Movie
+
+@{
+    ViewData["Title"] = "Delete " + Model.Title;
+}
+
+<div class="row movie-form-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid movie-form-header-column">
+        <p class="heading-title">Delete movie</p>
+    </div>
+</div>
+
+<div class="row form-container">
+    @* Movies list *@
+    <div class="container-fluid movie-form-container">
+        <form class="input-form" method="post" asp-controller="Movies" asp-action="Delete">
+            <input asp-for="MovieId" hidden />
+            @* Accesses the validation information in the model *@
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-row">
+                @* Movie title *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Title" disabled asp-for="Title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+                @* Movie directors *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Director/s" disabled asp-for="Directors">
+                    <span class="text-danger" asp-validation-for="Directors"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Movie genre/s *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Genre/s" disabled asp-for="Genres">
+                    <span class="text-danger" asp-validation-for="Genres"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Movie release date *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Release date" onfocus="(this.type='date')" disabled asp-for="ReleaseDate">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            @* Submit and reset button *@
+            <div class="form-row btn-container">
+                <div class="button-single">
+                    <input type="submit" class="btn btn-success" value="Submit" />
+                </div>
+                @*<div class="button">
+                    <input type="reset" class="btn btn-danger" value="Reset" />
+                </div>*@
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

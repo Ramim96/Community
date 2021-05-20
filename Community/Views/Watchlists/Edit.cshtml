@@ -1,0 +1,52 @@
+﻿@model Watchlist
+
+@{
+    ViewData["Title"] = "Edit watchlist";
+}
+
+<div class="row watchlist-form-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid watchlist-form-header-column">
+        <p class="heading-title">Edit watchlist</p>
+    </div>
+</div>
+
+<div class="row form-container">
+    @* Movies list *@
+    <div class="container-fluid watchlist-form-container">
+        <form class="input-form" method="post" asp-controller="Watchlists" asp-action="Edit">
+            <input asp-for="WatchlistId" hidden />
+            @* Accesses the validation information in the model *@
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-row">
+                @** Watch list title *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Title" asp-for="Title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+            </div>
+            <div class="form-row mb-2">
+                @* Watch list description *@
+                <div class="col">
+                    <textarea class="form-control" placeholder="Description" asp-for="Description"></textarea>
+                    <span class="text-danger" asp-validation-for="Description"></span>
+                </div>
+            </div>
+            @* Submit and reset button *@
+            <div class="form-row btn-container ">
+                <div class="button-single">
+                    <input type="submit" class="btn btn-success" value="Submit" />
+                </div>
+                @*<div class="button">
+                    <input type="reset" class="btn btn-danger" value="Reset" />
+                </div>*@
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

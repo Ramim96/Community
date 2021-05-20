@@ -1,0 +1,36 @@
+﻿@model SeriesViewModel
+
+@{
+    ViewData["Title"] = "Series";
+}
+
+<div class="row series-list-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid series-list-header-column">
+        @* Title *@
+        <p class="heading-title">Series list</p>
+
+        @* Button *@
+        <a class="btn btn-add-series" asp-controller="Series" asp-action="Create">
+            <i class="fas fa-plus-circle"></i>
+            Series
+        </a>
+    </div>
+</div>
+
+<div class="row series-list-content-row">
+    @* Movies list *@
+    <div class="col-sm-12 container-fluid series-list-content-column">
+        @if (Model.allSeries.Count() == 0)
+        {
+            <p class="empty-msg">No series available</p>
+        }
+        else
+        {
+            @foreach (var series in Model.allSeries)
+            {
+                <partial name="_SeriesCard" model="series" />
+            }
+        }
+    </div>
+</div>

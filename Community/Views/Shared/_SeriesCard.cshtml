@@ -1,0 +1,41 @@
+﻿@model Series
+
+<div class="card">
+    <div class="row no-gutters">
+        <div class="col-sm-4 img-container">
+            <img src="@Model.PosterImg" class="card-img-top rounded" alt="Movie cover" />
+        </div>
+        <div class="col-sm-8">
+            <div class="card-body">
+                @* Movie title *@
+                <h4 class="card-title">@Model.Title</h4>
+                <div class="series-feedback">
+                    @* Likes *@
+                    <p class="thumb thumb-up">
+                        <i class="fas fa-thumbs-up"></i>
+                        @Model.Likes
+                    </p>
+                    @* Dislikes *@
+                    <p class="thumb thumb-down">
+                        <i class="fas fa-thumbs-down"></i>
+                        @Model.Dislikes
+                    </p>
+                </div>
+                
+                <div class="btn-container">
+                    <a class="btn btn-details" asp-controller="Series" asp-action="Details" asp-route-Id="@Model.SeriesId">View details</a>
+
+                    <div class="dropdown show">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Add to watchlist
+                            <b class="caret"></b>
+                        </a>
+
+                        @await Component.InvokeAsync("SeriesWatchlistMenu", new { SeriesId = Model.SeriesId })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

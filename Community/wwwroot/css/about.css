@@ -1,0 +1,146 @@
+﻿/* Small screens (576 px) */
+/* About container */
+div.about-container {
+    margin: 0;
+    padding: 0;
+}
+
+div.about-container 
+div.about-column-container {
+    margin: 0;
+    padding: 0;
+}
+
+/* Privacy section */
+div.about-container 
+div.about-column-container 
+div.privacy-section {
+    margin: 0;
+    padding: 2%;
+}
+
+/* Info sections */
+div.about-container 
+div.about-column-container 
+div.info-section {
+    padding: 2%;
+}
+
+/* Info section title */
+div.about-container 
+div.about-column-container 
+p.heading-text {
+    padding: 0 3%;
+    border-left: solid 5px rgb(255, 133, 51);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 133, 51);
+}
+
+/* Section text content */
+div.about-container 
+div.about-column-container 
+p.section-text {
+    padding: 1%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+div.about-column-container 
+p.section-text 
+a.text-info {
+    font-weight: bold;
+}
+
+div.about-container 
+div.about-column-container 
+div.image-container {
+    display: none;
+}
+
+div.about-column-container 
+image-container 
+div.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background image */
+div.about-column-container 
+div.image-section 
+img.bg-image {
+    margin: 10% 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Medium screens (768 px) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Medium screens (992 px) */
+@media only screen and (min-width: 992px) {
+    /* About container */
+    div.about-container 
+    div.about-column-container {
+        display: flex;
+    }
+
+    /* Section header */
+    div.about-container
+    div.about-column-container
+    p.heading-text {
+        padding: 0 2%;
+    }
+
+    /* Info section */
+    p.heading-text {
+        padding: 1% 5%;
+    }
+
+    /* Background image */
+    div.about-container 
+    div.about-column-container 
+    div.image-container {
+        display: block;
+    }
+
+    div.image-container 
+    div.image-section 
+    img.bg-image {
+        margin: 30% 0 0 0;
+    }
+}
+
+/* Medium screens (1200 px) */
+@media only screen and (min-width: 1200px) {
+    /* About container */
+    div.about-container 
+    div.about-column-container {
+        display: flex;
+    }
+
+    /* Background image */
+    div.about-container 
+    div.about-column-container 
+    div.image-container {
+        display: block;
+    }
+
+    div.image-container
+    div.image-section {
+        width: 80%;
+    }
+
+    div.image-container
+    div.image-section
+    img.bg-image {
+        margin: 25% 0 0 0;
+    }
+}

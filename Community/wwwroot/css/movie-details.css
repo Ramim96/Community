@@ -1,0 +1,248 @@
+﻿/* Small screens (576 px) */
+/* Details container */
+div.movie-details-row {
+    margin: 0;
+    padding: 0;
+}
+
+div.movie-details-row
+div.movie-details-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Trailer */
+div.movie-details-row
+div.movie-details-column
+iframe.trailer {
+    margin: 2% 0 0 0;
+    width: 100%;
+}
+
+div.movie-details-row
+div.movie-details-column
+div.no-trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30vh;
+}
+
+/* No trailer message */
+div.movie-details-row
+div.movie-details-column
+div.no-trailer
+p.trailer-msg {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+/* Movie details */
+div.movie-details-row
+div.movie-details-column
+div.movie-data-column {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2% 0;
+    padding: 0;
+    border-radius: 10px;
+    width: 95%;
+    background-color: rgb(38, 38, 38);
+}
+
+div.movie-details-row
+div.movie-details-column
+div.movie-data-column
+div.info {
+    padding: 2%;
+    border-right: solid 2px rgb(255, 153, 0);
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.movie-details-row
+div.movie-details-column
+div.movie-data-column
+div.synopsis {
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Info details */
+div.movie-details-row
+div.movie-details-column
+div.movie-data-column
+div.info 
+p.heading {
+    margin: 0 0 2% 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 153, 0);
+}
+
+div.movie-details-row
+div.movie-details-column
+div.movie-data-column
+div.info
+p.info {
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    word-break: break-word;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Movie synopsis */
+div.movie-details-row
+div.movie-details-column
+div.movie-data-column
+div.synopsis
+p.heading {
+    margin: 0 0 2% 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 153, 0);
+}
+
+div.movie-details-row
+div.movie-details-column
+div.movie-data-column
+div.synopsis
+p.info {
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Controls container */
+div.movie-controls-row {
+    margin: 0 0 4% 0;
+    padding: 0;
+}
+
+/* Feedback */
+div.movie-controls-row 
+div.movie-feedback {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 4%;
+    margin: 0;
+}
+
+div.movie-controls-row
+div.movie-feedback
+p.thumb {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Buttons */
+div.movie-controls-row 
+div.control-btn-column {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0 2%;
+}
+
+div.movie-controls-row 
+div.control-btn-column 
+div.button {
+    margin: 0 2%;
+    width: 50%;
+}
+
+div.movie-controls-row
+div.control-btn-column
+div.button
+a.btn {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+}
+
+/* Medium screens (768 px) */
+@media only screen and (min-width: 768px) {
+    /* Controls container */
+    div.movie-controls-row {
+        margin: 0 0 2% 0;
+    }
+
+    /* Buttons */
+    div.movie-controls-row 
+    div.control-btn-column 
+    div.button {
+        width: 35%;
+    }
+}
+
+/* Medium screens (992 px) */
+@media only screen and (min-width: 992px) {
+    /* Trailer */
+    div.movie-details-row
+    div.movie-details-column
+    iframe.trailer {
+        width: 95%;
+    }
+
+    /* Controls container */
+    div.movie-controls-row {
+        margin: 0 0 2% 0;
+    }
+
+    /* Feedback */
+    div.movie-controls-row 
+    div.movie-feedback 
+    p.thumb {
+        width: 45%;
+    }
+
+    /* Buttons */
+    div.movie-controls-row
+    div.control-btn-column
+    div.button {
+        width: 30%;
+    }
+}
+
+/* Medium screens (1200 px) */
+@media only screen and (min-width: 1200px) {
+    /* Controls container */
+    div.movie-controls-row {
+        margin: 0 0 1% 0;
+    }
+
+    /* Feedback */
+    div.movie-controls-row
+    div.movie-feedback
+    p.thumb {
+        width: 40%;
+    }
+
+    /* Buttons */
+    div.movie-controls-row
+    div.control-btn-column
+    div.button {
+        width: 25%;
+    }
+}

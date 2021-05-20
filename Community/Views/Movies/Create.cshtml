@@ -1,0 +1,89 @@
+﻿@model Movie
+
+@{
+    ViewData["Title"] = "Add Movie";
+}
+
+<div class="row movie-form-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid movie-form-header-column">
+        <p class="heading-title">Add movie</p>
+    </div>
+</div>
+
+<div class="row form-container">
+    @* Movies list *@
+    <div class="container-fluid movie-form-container">
+        <form class="input-form" method="post" asp-controller="Movies" asp-action="Create">
+            @* Accesses the validation information in the model *@
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-row">
+                @** Movie title *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Title" asp-for="Title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+                @* Movie directors *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Director/s" asp-for="Directors">
+                    <span class="text-danger" asp-validation-for="Directors"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Movie actor/s *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Cast" asp-for="Actors">
+                    <span class="text-danger" asp-validation-for="Actors"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Movie genre/s *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Genre/s" asp-for="Genres">
+                    <span class="text-danger" asp-validation-for="Genres"></span>
+                </div>
+                @* Movie release date *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Release date" onfocus="(this.type='date')" asp-for="ReleaseDate">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Movie poster image *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Poster image" asp-for="PosterImg">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Movie trailer link *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Trailer link" asp-for="TrailerLink">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row mb-2">
+                @* Movie synopsis *@
+                <div class="col">
+                    <textarea class="form-control" placeholder="Synopsis" asp-for="Synopsis"></textarea>
+                    <span class="text-danger" asp-validation-for="Synopsis"></span>
+                </div>
+            </div>
+            @* Submit and reset button *@
+            <div class="form-row btn-container">
+                <div class="button">
+                    <input type="submit" class="btn btn-success" value="Submit" />
+                </div>
+                <div class="button">
+                    <input type="reset" class="btn btn-danger" value="Reset" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

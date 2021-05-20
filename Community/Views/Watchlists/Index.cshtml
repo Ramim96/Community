@@ -1,0 +1,36 @@
+﻿@model WatchlistViewModel
+
+@{
+    ViewData["Title"] = "Watchlists";
+}
+
+<div class="row watchlist-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid watchlist-header-column">
+        <p class="heading-title">Watchlists</p>
+        <a class="btn btn-add-watchlist" asp-controller="Watchlists" asp-action="Create">
+            <i class="fas fa-plus-circle"></i>
+            Watchlist
+        </a>
+    </div>
+</div>
+
+<div class="row watchlist-content-row">
+    @* Movies list *@
+    <div class="col-sm-12 container-fluid watchlist-content-column">
+        @if (Model.allWatchlists.Count() == 0)
+        {
+            <p class="empty-msg">No watchlists available</p>
+        }
+        else
+        {
+            @foreach (var watchlist in Model.allWatchlists)
+            {
+                <partial name="_WatchlistCard" model="watchlist" />
+            }
+        }
+    </div>
+</div>
+
+
+

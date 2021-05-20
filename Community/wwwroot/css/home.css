@@ -1,0 +1,358 @@
+﻿/* Small screens (576 px) */
+/* Carousel container */
+div.carousel-row {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(26, 26, 26);
+}
+
+div.carousel-row 
+div.carousel-column-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0; 
+    padding: 0;
+}
+
+/* Carousel section */
+div.carousel-column-container 
+div.carousel-section {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Carousel slider */
+div.carousel-section 
+div.carousel-slider {
+    display: flex;
+    align-items: center;
+    height: 65vh;
+}
+
+div.carousel-slider 
+div.carousel-inner {
+    display: flex; 
+    align-items: center;
+    height: 100%;
+}
+
+/* Carousel item */
+div.carousel-section 
+div.carousel-slider 
+div.item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel image */
+div.item-container 
+img.image {
+    margin: 0 2%;
+    width: 50%;
+}
+
+/* Carousel text header */
+div.item-container 
+p.carousel-heading {
+    padding: 0 4%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+div.item-container 
+p.carousel-heading 
+span {
+    color: rgb(255, 133, 51);
+}
+
+/* Arrow down button */
+div.carousel-section 
+div.arrow-down-btn {
+    display: none;
+}
+
+/* Info cards */
+div.info-row {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(26, 26, 26);
+}
+
+div.info-row 
+div.info-column-container {
+    margin: 0;
+    padding: 0;
+}
+
+div.info-column-container
+div.info-cards-column-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.info-column-container 
+div.info-cards-column-section 
+div.info-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Info section title */
+div.info-cards-column-section 
+p.heading-title {
+    margin: 4% 0 0 0;
+    padding: 0 3%;
+    border-left: solid 5px rgb(255, 133, 51);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 133, 51);
+}
+
+/* Cards */
+div.info-cards-column-section 
+div.info-cards-container 
+div.card {
+    margin: 2% 0;
+    border-radius: 8px;
+    width: 100%;
+    background-color: rgb(38, 38, 38);
+}
+
+div.info-cards-container 
+div.card 
+div.card-body 
+h4.card-title {
+    padding: 1% 0;
+    border-bottom: solid 2.5px rgb(255, 133, 51);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 255, 255);
+}
+
+div.info-cards-container 
+div.card 
+div.card-body 
+p.card-text {
+    padding: 1% 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Tutorial cards */
+div.tutorial-row {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(26, 26, 26);
+}
+
+div.tutorial-row 
+div.tutorial-column-container {
+    margin: 0;
+    padding: 0;
+}
+
+div.tutorial-column-container 
+div.tutorial-column-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Tutorial section title */
+div.tutorial-column-section 
+p.heading-title {
+    margin: 4% 0 0 0;
+    padding: 0 3%;
+    border-left: solid 5px rgb(255, 133, 51);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 133, 51);
+}
+
+/* Tutorial cards */
+div.tutorial-column-section 
+div.tutorial-cards-container 
+div.card {
+    margin: 2% 0;
+    border-radius: 8px;
+    background-color: rgb(38, 38, 38);
+}
+
+div.tutorial-cards-container 
+div.card 
+div.card-body 
+h4.card-title {
+    padding: 1% 0;
+    border-bottom: solid 2.5px rgb(255, 133, 51);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 255, 255);
+}
+
+div.tutorial-cards-container 
+div.card 
+div.card-body 
+p.card-text {
+    padding: 1% 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+div.card 
+div.card-body 
+p.card-text 
+span {
+    color: rgb(255, 133, 51);
+}
+
+video.tutorial-video {
+    margin: 0 auto 1% auto;
+    border-radius: 4px;
+    width: 98%;
+}
+
+/* Medium screens (768 px) */
+@media only screen and (min-width: 768px) {
+    /* Carousel image */
+    div.item-container 
+    img.image {
+        width: 40%;
+    }
+}
+
+/* Medium screens (992 px) */
+@media only screen and (min-width: 992px) {
+    /* Carousel image */
+    div.item-container 
+    img.image {
+        width: 30%;
+    }
+
+    /* Carousel text header */
+    div.item-container 
+    p.carousel-heading {
+        width: 45%;
+    }
+
+    /* Arrow down button */
+    div.carousel-section 
+    div.arrow-down-btn {
+        display: block;
+        font-size: 3em;
+    }
+
+    div.arrow-down-btn 
+    a 
+    i.fa-chevron-circle-down {
+        color: rgb(255, 133, 51);
+    }
+
+    /* Info section title */
+    div.info-cards-column-section 
+    p.heading-title {
+        padding: 0 2%;
+    }
+
+    /* Tutorial section title */
+    div.tutorial-column-section
+    p.heading-title {
+        padding: 0 2%;
+    }
+
+    /* Info cards */
+    div.info-column-container 
+    div.info-cards-column-section 
+    div.info-cards-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Cards */
+    div.info-cards-column-section 
+    div.info-cards-container 
+    div.card {
+        margin: 2% 1%;
+        width: 30%;
+        height: 60vh;
+    }
+
+    div.info-cards-container
+    div.card
+    div.card-body
+    h4.card-title {
+        padding: 3% 0;
+    }
+
+    /* Tutorial cards */
+    div.tutorial-row
+    div.tutorial-column-container
+    div.tutorial-column-section
+    div.tutorial-cards-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    div.tutorial-cards-container 
+    div.card div.card-body
+    h4.card-title {
+        padding: 2% 0;
+    }
+
+    div.tutorial-column-section 
+    div.tutorial-cards-container 
+    div.card {
+        margin: 2% 1%;
+        width: 48%;
+    }
+}
+
+/* Medium screens (1200 px) */
+@media only screen and (min-width: 1200px) {
+    /* Carousel slider */
+    div.carousel-section 
+    div.carousel-slider {
+        height: 70vh;
+    }
+
+    /* Carousel image */
+    div.item-container 
+    img.image {
+        width: 25%;
+    }
+
+    /* Cards */
+    div.info-cards-column-section
+    div.info-cards-container
+    div.card {
+        height: 50vh;
+    }
+}

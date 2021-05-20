@@ -1,0 +1,294 @@
+﻿/* Small screens (576 px) */
+/* Header container */
+div.watchlist-header-row {
+    margin: 4% 0;
+    padding: 0;
+}
+
+div.watchlist-header-row
+div.watchlist-header-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 2%;
+}
+
+/* Header title */
+div.watchlist-header-row
+div.watchlist-header-column
+p.heading-title {
+    margin: 0;
+    padding: 0 2%;
+    border-left: solid 5px rgb(255, 133, 51);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 133, 51);
+}
+
+/* Header add button */
+div.watchlist-header-row
+div.watchlist-header-column
+a.btn-add-watchlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 26%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, rgb(255, 51, 153), rgb(255, 133, 51));
+    outline: none;
+    cursor: pointer;
+}
+
+div.watchlist-header-row
+div.watchlist-header-column
+a.btn-add-watchlist
+i.fa-plus-circle {
+    font-size: 1.4em;
+}
+
+/* Watchlist container */
+div.watchlist-content-row {
+    margin: 0;
+    padding: 0;
+}
+
+div.watchlist-content-row
+div.watchlist-content-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0 2%;
+}
+
+/* Empty msg */
+div.watchlist-content-row
+div.watchlist-content-column
+p.empty-msg {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: rgb(255, 255, 255);
+}
+
+/* Watchlist card info */
+div.watchlist-content-row
+div.watchlist-content-column
+div.card {
+    margin: 2% 0;
+    border-radius: 8px;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(38, 38, 38);
+}
+
+/* Watchlist card */
+div.watchlist-content-row
+div.watchlist-content-column
+div.card
+div.card-body {
+    padding: 2%;
+    height: 100%;
+}
+
+/* Watchlist title */
+div.watchlist-content-row
+div.watchlist-content-column
+div.card
+div.card-body
+h4.card-title {
+    padding: 2%;
+    border-bottom: solid 2.5px rgb(255, 133, 51);
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    color: rgb(255, 255, 255);
+}
+
+div.watchlist-content-row
+div.watchlist-content-column
+div.card
+div.card-body
+div.watchlist-description {
+    min-height: 20vh;
+}
+
+/* Watchlist description */
+div.watchlist-content-row
+div.watchlist-content-column
+div.card
+div.card-body
+div.watchlist-description
+p.card-text {
+    padding: 2%;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button container */
+div.watchlist-content-row
+div.watchlist-content-column
+div.card
+div.card-body
+div.btn-container {
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* Watchlist details link button */
+div.watchlist-content-row
+div.watchlist-content-column
+div.card
+div.card-body
+div.btn-container
+a.btn-details {
+    margin: 3% 0;
+    border: solid 1.5px transparent;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 133, 51);
+    transition: all 0.5s;
+}
+
+a:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Medium screens (768 px) */
+@media only screen and (min-width: 768px) {
+    /* Header container */
+    div.watchlist-header-row {
+        margin: 2% 0;
+        padding: 0;
+    }
+
+    /* Header add button */
+    div.watchlist-header-row
+    div.watchlist-header-column
+    a.btn-add-watchlist {
+        width: 19%;
+    }
+
+    /* Watchlist card info */
+    div.watchlist-content-row 
+    div.watchlist-content-column 
+    div.card {
+        width: 70%;
+    }
+
+    div.watchlist-content-row
+    div.watchlist-content-column
+    div.card
+    div.card-body
+    h4.card-title {
+        font-size: 1.3em;
+    }
+}
+
+/* Medium screens (992 px) */
+@media only screen and (min-width: 992px) {
+    /* Header add button */
+    div.watchlist-header-row
+    div.watchlist-header-column
+    a.btn-add-watchlist {
+        width: 15%;
+    }
+
+    /* Watchlist container */
+    div.watchlist-content-row
+    div.watchlist-content-column {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    /* Watchlist card info */
+    div.watchlist-content-row 
+    div.watchlist-content-column 
+    div.card {
+        margin: 1%;
+        width: 30%;
+    }
+
+    /* Watchlist title */
+    div.watchlist-content-row
+    div.watchlist-content-column
+    div.card
+    div.card-body
+    h4.card-title {
+        font-size: 1.2em;
+    }
+
+    div.watchlist-content-row 
+    div.watchlist-content-column 
+    div.card 
+    div.card-body 
+    div.watchlist-description {
+        min-height: 28vh;
+    }
+}
+
+/* Medium screens (1200 px) */
+@media only screen and (min-width: 1200px) {
+    /* Header title */
+    div.watchlist-header-row
+    div.watchlist-header-column
+    p.heading-title {
+        font-size: 1.5em;
+    }
+
+    /* Header add button */
+    div.watchlist-header-row
+    div.watchlist-header-column
+    a.btn-add-watchlist {
+        width: 12%;
+    }
+
+    /* Watchlist card info */
+    div.watchlist-content-row
+    div.watchlist-content-column
+    div.card
+    div.card-body
+    div.watchlist-description {
+        min-height: 25vh;
+    }
+
+    /* Watchlist title */
+    div.watchlist-content-row
+    div.watchlist-content-column
+    div.card
+    div.card-body
+    h4.card-title {
+        font-size: 1.3em;
+    }
+
+    /* Watchlist details link button */
+    div.watchlist-content-row
+    div.watchlist-content-column
+    div.card
+    div.card-body
+    div.btn-container
+    a.btn-details:hover {
+        border: solid 1.5px rgb(255, 133, 51);
+        color: rgb(255, 255, 255);
+        background-color: rgba(255, 133, 51, 0);
+    }
+}
+

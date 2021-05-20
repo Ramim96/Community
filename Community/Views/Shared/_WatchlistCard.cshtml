@@ -1,0 +1,13 @@
+﻿@model Watchlist
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Title</h4>
+        <div class="watchlist-description">
+            <p class="card-text">@Model.Description</p>
+        </div>
+        <div class="btn-container">
+            <a class="btn btn-details" asp-controller="Watchlists" asp-action="Details" asp-route-Id="@Model.WatchlistId">View details</a>
+        </div>
+    </div>
+</div> 

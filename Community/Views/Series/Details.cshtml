@@ -1,0 +1,83 @@
+﻿@model Series
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="row series-details-row">
+    <div class="col-sm-12 container-fluid series-details-column">
+        @* Trailer *@
+        @if (!string.IsNullOrEmpty(Model.TrailerLink))
+        {
+            <iframe class="trailer"
+                    width="760"
+                    height="420"
+                    src="@Model.TrailerLink"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write=0; encrypted-media; gyroscope=0; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        }
+        else
+        {
+            <div class="no-trailer">
+                <p class="trailer-msg">No trailer available</p>
+            </div>
+        }
+
+        @* Movie details *@
+        <div class="col-12 series-data-column">
+            <div class="col-5 info">
+                <p class="heading">Title</p>
+                <p class="info">@Model.Title</p>
+                <p class="heading">Director/s</p>
+                <p class="info">@Model.Creators</p>
+                <p class="heading">Cast</p>
+                <p class="info">@Model.Actors</p>
+                <p class="heading">Genre/s</p>
+                <p class="info">@Model.Genres</p>
+                <p class="heading">Release Date</p>
+                <p class="info">@Model.ReleaseDate?.ToString("dd-MM-yyyy")</p>
+                <p class="heading">Number of seasons</p>
+                <p class="info">@Model.Seasons</p>
+            </div>
+            <div class="col-7 synopsis">
+                <p class="heading">Synopsis</p>
+                <p class="info">@Model.Synopsis</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row series-controls-row">
+    @* Likes/Dislikes *@
+    <div class="col-6 series-feedback">
+        @* Likes *@
+        <p class="thumb thumb-up">
+            <i class="fas fa-thumbs-up"></i>
+            @Model.Likes
+        </p>
+        @* Dislikes *@
+        <p class="thumb thumb-down">
+            <i class="fas fa-thumbs-down"></i>
+            @Model.Dislikes
+        </p>
+    </div>
+    @* Edit/Delete buttons *@
+    <div class="col-6 control-btn-column">
+        <div class="button">
+            <a class="btn btn-info" asp-controller="Series" asp-action="Edit" asp-route-Id="@Model.SeriesId">
+                <i class="far fa-edit"></i>
+                Edit
+            </a>
+        </div>
+        <div class="button">
+            <a class="btn btn-danger" asp-controller="Series" asp-action="Delete" asp-route-Id="@Model.SeriesId">
+                <i class="far fa-trash-alt"></i>
+                Delete
+            </a>
+        </div>
+    </div>
+</div>
+

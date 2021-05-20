@@ -1,0 +1,165 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@* Carousel section *@
+<div class="row carousel-row">
+    <div class="col-sm-12 container-fluid carousel-column-container">
+        @* Carousel *@
+        <div class="col-sm-12 carousel-section">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-slider" data-ride="carousel">
+
+                @* Carousel controls *@
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="item-container">
+                            <img class="image img-fluid" src="~/images/welcome.svg" alt="Welcome" />
+                            <p class="carousel-heading">Welcome to <span>Community</span>!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="item-container">
+                            <p class="carousel-heading">An <span>open source</span> web site to <span>manage</span> movies, series and watchlists</p>
+                            <img class="image img-fluid" src="~/images/manage.svg" alt="Find" />
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="item-container">
+                            <img class="image img-fluid" src="~/images/add.svg" alt="Create" />
+                            <p class="carousel-heading">Contribute by <span>adding</span> and <span>removing</span> movies, series and watchlists</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="item-container">
+                            <p class="carousel-heading"><span>Edit</span> the content to keep the web site up to date</p>
+                            <img class="image img-fluid" src="~/images/edit.svg" alt="Welcome" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Link section button *@
+            <div class="arrow-down-btn">
+                <a href="#info">
+                    <i class="fas fa-chevron-circle-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Cards info section *@
+<div id="info" class="info-row">
+    <div class="col-sm-12 container-fluid info-column-container">
+        @* Info cards section *@
+        <div class="col-sm-12 info-cards-column-section">
+            <div class="row col-sm-12 p-0">
+                @* Title *@
+                <p class="heading-title">What you need to know</p>
+            </div>
+
+            <div class="row col-sm-12 p-0 info-cards-container">
+                @* Info cards *@
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">What is it?</h4>
+                        <p class="card-text">
+                            Community is an open source web site that does not require you
+                            to register to the service.
+                            <br />
+                            <br />
+                            Have a look and give your contribution to keep things up to date.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Watch lists!?</h4>
+                        <p class="card-text">
+                            Watchlists are open source, and can be updated by adding and removing
+                            movies and series.
+                            <br />
+                            <br />
+                            Users can create watchlists to help suggesting movies and series to 
+                            see in the future.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">How?</h4>
+                        <p class="card-text">
+                            To create new content, visit the respective section on the naviation bar, 
+                            and click the button on the top right corner.
+                            <br />
+                            <br />
+                            Make sure you have a look to the input fields, and then search the
+                            requested data. Please, fill all fields!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Tutorial info section *@
+<div class="row tutorial-row">
+    <div class="col-sm-12 container-fluid tutorial-column-container">
+        @* Info cards section *@
+        <div class="col-sm-12 tutorial-column-section">
+            <div class="row col-sm-12 p-0">
+                @* Title *@
+                <p class="heading-title">How to provide the data</p>
+            </div>
+
+            <div class="row col-sm-12 p-0 tutorial-cards-container">
+                @* Info cards *@
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">YouTube trailer</h4>
+                        <p class="card-text">
+                            To add the trailer link, of either a movie or series, use YouTube as the source reference.
+                            Use the <span>http link</span> in the url bar, and replace a portion of the string with "embed/".
+                            <br />
+                            <br />
+                            Check the video tutorial below, and try following the steps.
+                        </p>
+                    </div>
+
+                    @* YouTube tutorial video *@
+                    <video class="tutorial-video" controls>
+                        <source src="~/videos/YouTube.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Movie and series data</h4>
+                        <p class="card-text">
+                            To create some content about a movie, or series, we would recommend to use IMDb as the source reference; 
+                            therefore, for some information, such as the release date, you might  be required to consult 
+                            other sites.
+                            <br />
+                            <br />
+                            Check the video tutorial below to add a poster image; it simply requires you to open the image in a 
+                            new tab and copy the <span>URL link</span> to the respective input field.
+                        </p>
+                    </div>
+
+                    @* IMDb tutorial video *@
+                    <video class="tutorial-video" controls>
+                        <source src="~/videos/IMDb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

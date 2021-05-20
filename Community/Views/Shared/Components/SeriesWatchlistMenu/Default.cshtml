@@ -1,0 +1,15 @@
+﻿@model SeriesMenuViewModel
+
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    @if (Model.watchlists.Count() == 0)
+    {
+        <a class="dropdown-item" href="#">No watchlist</a>
+    }
+    else
+    {
+        @foreach (var watchlist in Model.watchlists)
+        {
+            <a class="dropdown-item" asp-controller="Watchlists" asp-action="AddSeries" asp-route-SeriesId="@Model.series.SeriesId" asp-route-WatchListId="@watchlist.WatchlistId">@watchlist.Title</a>
+        }
+    }
+</div>

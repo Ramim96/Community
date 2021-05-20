@@ -1,0 +1,96 @@
+﻿@model Series
+
+@{
+    ViewData["Title"] = "Add Series";
+}
+
+<div class="row series-form-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid series-form-header-column">
+        <p class="heading-title">Add series</p>
+    </div>
+</div>
+
+<div class="row form-container">
+    @* Series list *@
+    <div class="container-fluid series-form-container">
+        <form class="input-form" method="post" asp-controller="Series" asp-action="Create">
+            @* Accesses the validation information in the model *@
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-row">
+                @* Series title *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Title" asp-for="Title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+                @* Series creators *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Creator/s" asp-for="Creators">
+                    <span class="text-danger" asp-validation-for="Creators"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Series actor/s *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Cast" asp-for="Actors">
+                    <span class="text-danger" asp-validation-for="Actors"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Series genre/s *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Genre/s" asp-for="Genres">
+                    <span class="text-danger" asp-validation-for="Genres"></span>
+                </div>
+                @* Series release date *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Release date" onfocus="(this.type='date')" asp-for="ReleaseDate">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Series poster image *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Poster image" asp-for="PosterImg">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Series trailer link *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Trailer link" asp-for="TrailerLink">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                @* Series number of seasons *@
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Number of seasons" asp-for="Seasons">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row mb-2">
+                @* Series synopsis *@
+                <div class="col">
+                    <textarea class="form-control" placeholder="Synopsis" asp-for="Synopsis"></textarea>
+                    <span class="text-danger" asp-validation-for="Synopsis"></span>
+                </div>
+            </div>
+            @* Submit and reset button *@
+            <div class="form-row btn-container">
+                <div class="button">
+                    <input type="submit" class="btn btn-success" value="Submit" />
+                </div>
+                <div class="button">
+                    <input type="reset" class="btn btn-danger" value="Reset" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

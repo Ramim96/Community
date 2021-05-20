@@ -1,0 +1,94 @@
+﻿@model SearchViewModel
+
+@{
+    ViewData["Title"] = "Search result";
+}
+
+<div class="row search-result-header-row">
+    @* Header section *@
+    <div class="col-sm-12 container-fluid search-result-header-column">
+        @* Title *@
+        <p class="heading-title">Search result</p>
+    </div>
+</div>
+
+@if (Model.Type == "Movie")
+{
+    <div class="row movie-list-content-row">
+        @if (Model.moviesResult != null)
+        {
+            @* Movies list *@
+            <div class="col-sm-12 container-fluid movies-list-content-column">
+                @if (Model.moviesResult.Count() == 0)
+                {
+                    <p class="empty-msg">No items available</p>
+                }
+                else
+                {
+                    @foreach (var movie in Model.moviesResult)
+                    {
+                        <partial name="_MovieCard" model="movie" />
+                    }
+                }
+            </div>
+        }
+        else
+        {
+            <p class="empty-msg">No items available</p>
+        }
+    </div>
+}
+
+@if (Model.Type == "Series")
+{
+    <div class="row series-list-content-row">
+        @if (Model.seriesResult != null)
+        {
+            @* Series list *@
+            <div class="col-sm-12 container-fluid series-list-content-column">
+                @if (Model.seriesResult.Count() == 0)
+                {
+                    <p class="empty-msg">No items available</p>
+                }
+                else
+                {
+                    @foreach (var series in Model.seriesResult)
+                    {
+                        <partial name="_SeriesCard" model="series" />
+                    }
+                }
+            </div>
+        }
+        else
+        {
+            <p class="empty-msg">No items available</p>
+        }
+    </div>
+}
+
+@if (Model.Type == "Watchlist")
+{
+    <div class="row watchlist-content-row">
+        @if (Model.watchlistsResult != null)
+        {
+            @* Watchlists list *@
+            <div class="col-sm-12 container-fluid watchlist-content-column">
+                @if (Model.watchlistsResult.Count() == 0)
+                {
+                    <p class="empty-msg">No items available</p>
+                }
+                else
+                {
+                    @foreach (var watchlist in Model.watchlistsResult)
+                    {
+                        <partial name="_WatchlistCard" model="watchlist" />
+                    }
+                }
+            </div>
+        }
+        else
+        {
+            <p class="empty-msg">No items available</p>
+        }
+    </div>
+}

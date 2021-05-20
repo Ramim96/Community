@@ -1,0 +1,31 @@
+﻿@model MovieWatchlist
+
+<div class="card">
+    <div class="row no-gutters">
+        <div class="col-sm-4 img-container">
+            <img src="@Model.Movie.PosterImg" class="card-img-top rounded" alt="Movie cover" />
+        </div>
+        <div class="col-sm-8">
+            <div class="card-body">
+                @* Movie title *@
+                <h4 class="card-title">@Model.Movie.Title</h4>
+                <div class="item-feedback">
+                    @* Likes *@
+                    <a class="btn thumb thumb-up" asp-controller="Movies" asp-action="Likes" asp-route-MovieId="@Model.Movie.MovieId" asp-route-WatchlistId="@Model.Watchlist.WatchlistId">
+                        <i class="fas fa-thumbs-up"></i>
+                        @Model.Movie.Likes
+                    </a>
+                    @* Dislikes *@
+                    <a class="btn thumb thumb-down" asp-controller="Movies" asp-action="Dislikes" asp-route-MovieId="@Model.Movie.MovieId" asp-route-WatchlistId="@Model.Watchlist.WatchlistId">
+                        <i class="fas fa-thumbs-down"></i>
+                        @Model.Movie.Dislikes
+                    </a>
+                </div>
+                <div class="btn-container">
+                    <a class="btn btn-details" asp-controller="Movies" asp-action="Details" asp-route-Id="@Model.Movie.MovieId">View details</a>
+                    <a class="btn btn-remove" asp-controller="Watchlists" asp-action="RemoveMovie" asp-route-MovieId="@Model.Movie.MovieId" asp-route-WatchlistId="@Model.Watchlist.WatchlistId">Remove</a>
+                </div>
+               </div>
+        </div>
+    </div>
+</div>
