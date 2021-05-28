@@ -159,6 +159,20 @@ div.watchlist-items-container-row
 div.watchlist-items-container-column
 div.card-body
 div.item-feedback
+p.vote-label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.03em;
+    color: rgb(255, 255, 255);
+}
+
+div.watchlist-items-container-row
+div.watchlist-items-container-column
+div.card-body
+div.item-feedback
 a.thumb {
     display: flex;
     margin: 5% 0 0 4%;
@@ -194,7 +208,7 @@ div.watchlist-items-container-column
 div.card-body
 div.btn-container {
     position: absolute;
-    bottom: 4%;
+    bottom: 0%;
     width: 95%;
 }
 
@@ -204,7 +218,7 @@ div.watchlist-items-container-column
 div.card-body
 div.btn-container
 a.btn-details {
-    margin: 3% 0;
+    margin: 1% 0;
     border: solid 1.5px rgb(255, 51, 153);
     border-radius: 5px;
     width: 100%;
@@ -348,7 +362,7 @@ a.btn-remove {
     div.watchlist-items-container-column
     div.card-body
     div.btn-container {
-        bottom: 6%;
+        bottom: 2%;
     }
 
     /* Watchlist item link button */

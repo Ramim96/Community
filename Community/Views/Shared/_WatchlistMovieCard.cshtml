@@ -10,15 +10,40 @@
                 @* Movie title *@
                 <h4 class="card-title">@Model.Movie.Title</h4>
                 <div class="item-feedback">
+                    <p class="vote-label">Vote</p>
                     @* Likes *@
                     <a class="btn thumb thumb-up" asp-controller="Movies" asp-action="Likes" asp-route-MovieId="@Model.Movie.MovieId" asp-route-WatchlistId="@Model.Watchlist.WatchlistId">
                         <i class="fas fa-thumbs-up"></i>
-                        @Model.Movie.Likes
+                        @* Add K or M suffix based on number of likes or dislikes *@
+                        @if (Model.Movie.Likes >= 1000000)
+                        {
+                            @string.Format("{0:#,0,, M}", Model.Movie.Likes)
+                        }
+                        else if (Model.Movie.Likes >= 1000)
+                        {
+                            @string.Format("{0:#,0, K}", Model.Movie.Likes)
+                        }
+                        else
+                        {
+                            @Model.Movie.Likes
+                        }
                     </a>
                     @* Dislikes *@
                     <a class="btn thumb thumb-down" asp-controller="Movies" asp-action="Dislikes" asp-route-MovieId="@Model.Movie.MovieId" asp-route-WatchlistId="@Model.Watchlist.WatchlistId">
                         <i class="fas fa-thumbs-down"></i>
-                        @Model.Movie.Dislikes
+                        @* Add K or M suffix based on number of likes or dislikes *@
+                        @if (Model.Movie.Dislikes >= 1000000)
+                        {
+                            @string.Format("{0:#,0,, M}", Model.Movie.Dislikes)
+                        }
+                        else if (Model.Movie.Dislikes >= 1000)
+                        {
+                            @string.Format("{0:#,0, K}", Model.Movie.Dislikes)
+                        }
+                        else
+                        {
+                            @Model.Movie.Dislikes
+                        }
                     </a>
                 </div>
                 <div class="btn-container">

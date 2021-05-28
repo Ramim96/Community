@@ -10,15 +10,40 @@
                 @* Movie title *@
                 <h4 class="card-title">@Model.Series.Title</h4>
                 <div class="item-feedback">
+                    <p class="vote-label">Vote</p>
                     @* Likes *@
                     <a class="btn thumb thumb-up" asp-controller="Series" asp-action="Likes" asp-route-SeriesId="@Model.Series.SeriesId" asp-route-WatchlistId="@Model.Watchlist.WatchlistId">
                         <i class="fas fa-thumbs-up"></i>
-                        @Model.Series.Likes
+                        @* Add K or M suffix based on number of likes or dislikes *@
+                        @if (Model.Series.Likes >= 1000000)
+                        {
+                            @string.Format("{0:#,0,, M}", Model.Series.Likes)
+                        }
+                        else if (Model.Series.Likes >= 1000)
+                        {
+                            @string.Format("{0:#,0, K}", Model.Series.Likes)
+                        }
+                        else
+                        {
+                            @Model.Series.Likes
+                        }
                     </a>
                     @* Dislikes *@
                     <a class="btn thumb thumb-down" asp-controller="Series" asp-action="Dislikes" asp-route-SeriesId="@Model.Series.SeriesId" asp-route-WatchlistId="@Model.Watchlist.WatchlistId">
                         <i class="fas fa-thumbs-down"></i>
-                        @Model.Series.Dislikes
+                        @* Add K or M suffix based on number of likes or dislikes *@
+                        @if (Model.Series.Dislikes >= 1000000)
+                        {
+                            @string.Format("{0:#,0,, M}", Model.Series.Dislikes)
+                        }
+                        else if (Model.Series.Dislikes >= 1000)
+                        {
+                            @string.Format("{0:#,0, K}", Model.Series.Dislikes)
+                        }
+                        else
+                        {
+                            @Model.Series.Dislikes
+                        }
                     </a>
                 </div>
                 <div class="btn-container">

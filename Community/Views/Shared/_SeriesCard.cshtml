@@ -13,12 +13,36 @@
                     @* Likes *@
                     <p class="thumb thumb-up">
                         <i class="fas fa-thumbs-up"></i>
-                        @Model.Likes
+                        @* Add K or M suffix based on number of likes or dislikes *@
+                        @if (Model.Likes >= 1000000)
+                        {
+                            @string.Format("{0:#,0,, M}", Model.Likes)
+                        }
+                        else if (Model.Likes >= 1000)
+                        {
+                            @string.Format("{0:#,0, K}", Model.Likes)
+                        }
+                        else
+                        {
+                            @Model.Likes
+                        }
                     </p>
                     @* Dislikes *@
                     <p class="thumb thumb-down">
                         <i class="fas fa-thumbs-down"></i>
-                        @Model.Dislikes
+                        @* Add K or M suffix based on number of likes or dislikes *@
+                        @if (Model.Dislikes >= 1000000)
+                        {
+                            @string.Format("{0:#,0,, M}", Model.Dislikes)
+                        }
+                        else if (Model.Dislikes >= 1000)
+                        {
+                            @string.Format("{0:#,0, K}", Model.Dislikes)
+                        }
+                        else
+                        {
+                            @Model.Dislikes
+                        }
                     </p>
                 </div>
                 
